@@ -1,0 +1,66 @@
+.button-effect {
+    position: relative;
+    top: 20px;
+    left: calc(-30px);
+    width : 60px;
+    height : 20px;
+    border-style : none;
+    color  : white;
+    background-color: rgb(255, 115, 0);
+    border-radius : 5px;
+    cursor : pointer;
+}
+
+.button-effect:hover {
+    background-color: rgb(252, 136, 41);
+}
+
+.cancle-button {
+    position: relative;
+    left: calc(-105px);
+    width : 60px;
+    height : 20px;
+    border-style : none;
+    color  : white;
+    background-color: rgb(255, 115, 0);
+    border-radius : 5px;
+    cursor : pointer;
+}
+
+.cancle-button:hover {
+    background-color: rgb(252, 136, 41);
+}
+
+
+.note {
+    border-bottom: 0.5px solid rgb(31, 31, 31);
+    height: 80px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .note:hover {
+    background-color: rgb(70, 73, 75);
+  }
+
+.edit, .delete {
+    width: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.edit:hover {
+    background-image: url("../assets/edit.png");
+}
+.delete:hover{
+    background-image: url("../assets/delete.png");
+}
+
+.note-content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

@@ -14,6 +14,13 @@ function Note() {
 
     return (
         <div className="note">
+            <div className="notes-counter">
+                <div id="logo-container">
+                    <div id="logo"></div>
+                    <h3>Notes</h3>
+                </div>
+                <span>3</span>
+            </div>
             {notes.map((note) => (
                 <div key={note.id} id={`note-${note.id}`}>
                     <h3>{note.title}</h3>

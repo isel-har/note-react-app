@@ -1,145 +1,143 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap'); import fonts from web*/
-
 * {
   box-sizing: border-box;
   font-family: 'Lexend', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: rgb(38, 38, 39);
-  font-family: 'Lexend';
-  line-height: 1.8em;
-  font-weight: 400;
-  font-size: 16px;
+  background-color: rgb(39, 40, 41);
 }
 
-.notes-container {
+.note-container {
   position: fixed;
+  top: 40px;
+  left:calc(100% - (50% + 250px));
   width: 500px;
   height: 700px;
-  top: 40px;
-  left: calc(100% - (50% + 250px));
-  background-color: rgb(39, 43, 49);
-  h1 {
-    background-color: rgb(36, 36, 36);
-    height: 60px;
-    padding-left: 15px;
-    padding-top: 15px;
-    color: white;
-    
-  };
+  background-color: rgb(55, 56, 59);
 }
 
-.notes-counter {
-  background-color: rgb(54, 56, 56);
+h1 {
+  height: 60px;
+  background-color: rgb(46, 47, 49);
+  color: white;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 2.1rem;
+}
+
+#notes-counter {
+  height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  height: 60px;
-  #logo-container {
-    background-color: rgb(54, 56, 56);
-    width: 100px;
+  justify-content: space-between;
+  padding-left:15px;
+  padding-right:15px;
+  #logo {
+    width: calc(max-content + 10px);
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color:rgb(255, 115, 0);
-    font-size: 1.3rem;
-  };
-  span {
-    color: white;
-    font-size: 1.3rem;
-  };
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.note {
-  height: 580px;
-  background-color: rgb(54, 56, 56);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  #note-1 {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 0.5px solid rgb(39, 39, 39);
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
-#note-1:hover{
-  background-color:rgb(68, 70, 70);
+#note-logo {
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/note.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h3 {
+  font-size: 30px;
+  color: rgb(255, 115, 0);
+}
+
+#notes-number {
+  font-size: 22px;
+  color: gray;
 }
 
 #add-note {
+  position: absolute;
+  top: calc(100% - 80px);
+  left: calc(100% - 80px);
   width: 60px;
   height: 60px;
-  align-self: flex-end;
-  margin-bottom: 30px;
-  margin-right: 15px;
   border-radius: 30px;
   border: none;
   background-color: rgb(255, 115, 0);
   background-image: url("../assets/add.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size:30px;
+  background-size: 30px;
   cursor: pointer;
 }
-
 #add-note:hover {
-  background-color: rgb(253, 135, 39);
-  background-image: url("../assets/add.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-size:30px;
+  background-color: rgb(252, 136, 41);
 }
 
-#options {
-  width: 50px;
-  height: 50px;
+#notes-list {
   display: flex;
+  flex-direction: column;
+  height: 580px;
+}
+
+.note {
+  border-bottom: 0.5px solid rgb(31, 31, 31);
+  height: 80px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  left: calc(100% - 50px);
-  top: calc(-100%);
 }
 
-#edit, #delete {
-  width: 20px;
-  height: 20px;
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
+.note:hover {
+  background-color: rgb(70, 73, 75);
 }
 
-#delete {
-  background-image: url("../assets/delete.png");
-  background-position: center;
-  background-size: contain;
+.left-side-note {
+  width: 410px;
+  height: 60px;
 }
 
-#edit {
-  background-image: url("../assets/edit.png");
-  background-position: center;
-  background-size: contain;
-}
 
-#logo {
-  width: 50px;
+.buttons {
+  width: 75px;
   height: 30px;
-  background-image: url("../assets/note.png");
-  background-position: center;
-  background-size: cover;
+  display: flex;
+  padding-right: 15px;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+  #edit, #delete {
+    width: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  };
+  #edit:hover {
+    background-image: url("../assets/edit.png");
+  };
+  #delete:hover{
+    background-image: url("../assets/delete.png");
+  }
+}
+
+.note-title {
+  width: 200px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: rgb(229, 245, 255);
+}
+.note-content {
+  color: gray;
+  font-weight: 700;
 }
