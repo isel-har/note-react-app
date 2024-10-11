@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: rgb(40,43,48);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-container {
+  width: 500px;
+  height: 700px;
+  background-color:	rgb(66,69,73);
+  position: absolute;
+  top: 40px;
+  left: calc(100% - (50% + 250px));
+}
+
+.header {
+  background-color: rgb(30,33,36);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.note-list {
+	height: 580px;
+}
+
+.notes-counter {
+	width: 500px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.3rem;
+	h3 {
+		color: rgb(242,143,12);
+		font-weight: 500;
+	};
+	span {
+		color: gray;
+	};
+}
+
+.list {
+	height: 580px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+
+.Note {
+	position: relative;
+	height: 80px;
+	border-bottom: 0.5px solid rgb(37, 37, 37);
+	cursor: pointer;
+	padding-left: 15px;
+	padding-top: 15px;
+	/* text-decoration: none; */
+}
+
+.Note:hover {
+	background-color: rgb(60, 63, 66);
+	
+	span {
+		background-image: url("assets/edit.png");
+		background-position: center;
+		background-size: 100%;
+	}
+	/* text-decoration: none; */
+}
+
+.title {
+	margin-bottom: 15px;
+	font-size:  1rem;
+	color: rgb(209, 209, 209);
+}
+
+.body {
+	font-size:  0.9rem;
+	color: rgb(170, 170, 170);
+	white-space: nowrap;
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	/* text- */
+}
+
+.add {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	background-color: rgb(242,143,12);
+	border-radius: 60px;
+	border-style: none;
+	left:calc(100% - 75px);
+	top: calc(100% - 75px);
+	background-image: url("./assets/add.png");
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.add:hover {
+	background-color: rgb(255, 144, 70);
+}
+
+.back {
+	background-image: url("./assets/back.png");
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	/* top:15px; */
+}
+
+.paper {
+	position: relative;
+	height: 580px;
+}
+
+.Typing {
+	resize: none;
+	position: relative;
+	background-color: rgb(66,69,73);
+	width: 100%;
+	height: 100%;
+	top: 60px;
+	border: none;
+	outline: none;
+	padding-left: 15px;
+	padding-top: 15px;
+	font-size: 1.1rem;
+	overflow: hidden;
+}
+
+.edit-symbol {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	left: calc(100% - 45px);
+	top: calc(100% - (50% + 15px));
+}
+
+.discard {
+	width: 30px;
+	height: 40px;
+	position: absolute;
+	background-image: url("assets/delete.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	left: calc(100% - 35px);
+	top: 10px;
 }
