@@ -37,12 +37,11 @@ def noteview(request, id):
 
 @api_view(['POST'])
 def createnote(request):
-
     try:
         serialize = NoteSerializer(data=request.data)
         if serialize.is_valid():
             serialize.save()
-            return Response({'data': 'note created'}, status=201)
+            return Response({'data': serialize.data}, status=201)
         return Response({'error': 'invalid data.'}, status=400)
     except:
         return Response({'error': 'invalid data.'}, status=400)

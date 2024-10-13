@@ -46,7 +46,7 @@ body {
 		font-weight: 500;
 	};
 	span {
-		color: gray;
+		color: rgb(195, 195, 195);
 	};
 }
 
@@ -108,7 +108,7 @@ body {
 	cursor: pointer;
 }
 .add:hover {
-	background-color: rgb(255, 144, 70);
+	background-color: rgb(249, 163, 106);
 }
 
 .back {
@@ -160,4 +160,24 @@ body {
 	background-position: center;
 	left: calc(100% - 35px);
 	top: 10px;
+}
+
+.post {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgb(242,143,12);
+	background-image: url("assets/add.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	position: relative;
+	left: calc(100% - 80px);
+	top: 15px;
+	cursor: pointer;
+}
+
+.post:hover {
+	background-color: rgb(249, 163, 106);
 }

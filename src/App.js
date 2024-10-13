@@ -14,7 +14,7 @@ function App() {
 			<Routes>
 				<Route path="/" exact element={<NotesListPage />} />
 				<Route path="/note/:id" element={<NotePage />} />
-				{/* <Route path="/new" element={<NewPage />} /> */}
+				<Route path="note/new" element={<NotePage />} />
 				<Route path="*" element={<NoPage />} />
 			</Routes>
       	</div>
