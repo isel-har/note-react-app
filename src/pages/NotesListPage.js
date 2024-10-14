@@ -7,14 +7,12 @@ export const API_URL = "http://localhost:8000/api";
 function  NotesListPage()
 {
     const [notes, setNotes] = useState([]);
-    
     const getList = async() => {
         const response = await fetch(`${API_URL}/notes`);
         const data = await response.json();
-        setNotes(data.data);
+        setNotes(data);
     }
     useEffect(() => {
-        console.log("use effect trigged")
         getList();
     }, []);
 

@@ -112,14 +112,14 @@ body {
 }
 
 .back {
-	background-image: url("./assets/back.png");
+	background-image: url("./assets/left-arrow.png");
 	background-position: center;
 	background-size: 80%;
 	background-repeat: no-repeat;
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	/* top:15px; */
+	cursor: pointer;
 }
 
 .paper {
@@ -160,6 +160,7 @@ body {
 	background-position: center;
 	left: calc(100% - 35px);
 	top: 10px;
+	cursor: pointer;
 }
 
 .post {
