@@ -79,7 +79,7 @@ function NotePage() {
     return (
         <div className="paper">
             <div  className='back' onClick={submitHandler}></div>
-            <div  className="discard" onClick={()  => submitHandler(true)}></div>
+            { id && note.body && (<div  className="discard" onClick={()  => submitHandler(true)}></div>) }
             <textarea className="Typing" onChange={(e) => {setNote({...note, body:e.target.value})}} value={note?.body} maxLength={500} />
         </div>
     );
